@@ -11,6 +11,9 @@ class ExampleOAuth2Client:
             access_token_url="https://id.twitch.tv/oauth2/authorize",
             authorize_url="https://id.twitch.tv/oauth2/authorize",
             base_url="https://id.twitch.tv/",
+            
+            
+            
         )
 
         self.get_access_token()
@@ -18,10 +21,14 @@ class ExampleOAuth2Client:
     def get_access_token(self):
         data = {'code': 'bar',
                 'grant_type': 'client_credentials',
-                'redirect_uri': 'http://localhost'}
+                'response_type': "token",
+                'scope':"channel%3Amanage%3Apolls+channel%3Aread%3Apolls",
+                'redirect_uri': 'http://localhost',
+                'state':"xyzABC123"}
 
         session = self.service.get_auth_session(data=data, decoder=json.loads)
 
         self.access_token = session.access_token
 
-print(ExampleOAuth2Client.get_access_token(self))
+k = ExampleOAuth2Client('oqz05s964t9gomcyuqu6dijgys8dcw', 'rfoxgf4p1sjrdd8aatc9303jqhaiin')
+print(k.get_access_token())
