@@ -2,7 +2,7 @@ import requests
 
 
 API_HEADERS = {
-    'Client-ID' : 'oqz05s964t9gomcyuqu6dijgys8dcw',
+    'Client-ID' : 'xxxxx',
     'Accept' : 'application/vnd.twitchtv.v5+json',
 }
 
