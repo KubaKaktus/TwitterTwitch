@@ -5,9 +5,9 @@ class ExampleOAuth2Client:
         self.access_token = None
 
         self.service = OAuth2Service(
-            name="Dweam",
-            client_id="oqz05s964t9gomcyuqu6dijgys8dcw",
-            client_secret="rfoxgf4p1sjrdd8aatc9303jqhaiin",
+            name="name",
+            client_id="id",
+            client_secret="secret",
             access_token_url="https://id.twitch.tv/oauth2/authorize",
             authorize_url="https://id.twitch.tv/oauth2/authorize",
             base_url="https://id.twitch.tv/",
@@ -30,5 +30,5 @@ class ExampleOAuth2Client:
 
         self.access_token = session.access_token
 
-k = ExampleOAuth2Client('oqz05s964t9gomcyuqu6dijgys8dcw', 'rfoxgf4p1sjrdd8aatc9303jqhaiin')
+k = ExampleOAuth2Client('id', 'secret')
 print(k.get_access_token())
